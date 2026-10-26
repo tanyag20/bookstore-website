@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0f2f1;
+    margin: 0;
+    color: #222;
+  }
+
+  .navbar {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  h2 {
+    text-align: center;
+    color: darkcyan;
+    margin-top: 40px;
+  }
+
+  .cart-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    max-width: 700px;
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    color: darkcyan;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-size: 15px;
+  }
+
+  .book-cover {
+    width: 40px;
+    height: 55px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  .item-name {
+    vertical-align: middle;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #b03030;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .remove-btn:hover {
+    text-decoration: underline;
+  }
+
+  .cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+  }
+
+  .cart-summary p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .cart-summary .total {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkcyan;
+  }
+
+  .checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .checkout-btn:hover {
+    background-color: teal;
+  }
+
+  .empty-cart {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    padding: 30px 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+  </div>
+
+  <h2>Your Cart</h2>
+
+  <div class="cart-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="book-cover" style="background-color: darkcyan;"></span>
+            <span class="item-name">The Quiet Tide</span>
+          </td>
+          <td>$14.99</td>
+          <td><input type="number" value="1" min="1"></td>
+          <td>$14.99</td>
+          <td><button class="remove-btn">Remove</button></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="book-cover" style="background-color: #b8860b;"></span>
+            <span class="item-name">Ember &amp; Ash</span>
+          </td>
+          <td>$12.50</td>
+          <td><input type="number" value="2" min="1"></td>
+          <td>$25.00</td>
+          <td><button class="remove-btn">Remove</button></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="book-cover" style="background-color: #7a2e2e;"></span>
+            <span class="item-name">North of Nowhere</span>
+          </td>
+          <td>$16.00</td>
+          <td><input type="number" value="1" min="1"></td>
+          <td>$16.00</td>
+          <td><button class="remove-btn">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <p>Subtotal: $55.99</p>
+      <p>Shipping: $4.00</p>
+      <p class="total">Total: $59.99</p>
+    </div>
+
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+</body>
+</html>
